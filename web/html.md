@@ -907,4 +907,181 @@ Browsers ignore errors in HTML pages, and try to display the website even if it 
 
 ## HTML Forms
 
+An HTML form is used to collect `user input`. The user input is most often sent to a server for processing. 
+
+### The <input> Element
+
+An `<input>` element can be displayed in many ways, depending on the type attribute.
+
+Type                    Description
+<input type="text">     Displays a single-line text input field
+<input type="radio">    Displays a radio button (for selecting one of many choices)
+<input type="checkbox">     Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">   Displays a submit button (for submitting the form)
+<input type="button">   Displays a clickable button
+
+The `<input type="text">` defines a single-line input field for text input.
+
+```html
+ <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form> 
+```
+> Note: The form itself is not visible. Also note that the default width of an input field is 20 characters.
+
+### The <label> Element
+
+The `<label>` tag defines a label for many form elements.
+
+The `for` attribute of the `<label>` tag should be equal to the `id` attribute of the <input> element to bind them together. 
+
+### Radio Buttons
+
+```html
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+```
+
+### Checkboxes
+
+```html
+ <form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form> 
+```
+
+### The Submit Button
+
+The `<input type="submit">` defines a button for submitting the form data to a form-handler.
+
+The form-handler is specified in the form's `action` attribute.
+
+> Tip: Always use POST if the form data contains sensitive or personal information!
+
+> NEVER use `GET` to send `sensitive` data! (the submitted form data is visible in the URL!)
+
+Notes on GET:
+
+    Appends the form data to the URL, in name/value pairs
+    NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+    The length of a URL is limited (2048 characters)
+    Useful for form submissions where a user wants to bookmark the result
+    GET is good for non-secure data, like query strings in Google
+
+Notes on POST:
+
+    Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+    POST has no size limitations, and can be used to send large amounts of data.
+    Form submissions with POST cannot be bookmarked
+
+### The Autocomplete Attribute
+
+The `autocomplete` attribute specifies whether a form should have autocomplete on or off.
+
+```html
+<form action="/action_page.php" autocomplete="on"> 
+```
+
+## The HTML <form> Elements
+
+    <input>
+    <label>
+    <select>
+    <textarea>
+    <button>
+    <fieldset>
+    <legend>
+    <datalist>
+    <output>
+    <option>
+    <optgroup>
+
+### The <select> Element
+
+The `<select>` element defines a drop-down list.
+
+```html
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select> 
+```
+
+Allow Multiple Selections:
+
+Use the `multiple` attribute to allow the user to select more than one value:
+
+```html
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" size="4" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select> 
+```
+
+### The <button> Element
+
+The `<button>` element defines a clickable button.
+
+```html
+<button type="button" onclick="alert('Hello World!')">Click Me!</button> 
+```
+
+### HTML Input Types
+
+    <input type="button">
+    <input type="checkbox">
+    <input type="color">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="email">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="month">
+    <input type="number">
+    <input type="password">
+    <input type="radio">
+    <input type="range">
+    <input type="reset">
+    <input type="search">
+    <input type="submit">
+    <input type="tel">
+    <input type="text">
+    <input type="time">
+    <input type="url">
+    <input type="week">
+
+> Tip: The default value of the type attribute is "text".
+
+The `<input type="hidden">` defines a hidden input field (not visible to a user).
+
+## HTML Video
+
+The HTML `<video>` element is used to show a video on a web page.
+
+The `controls` attribute adds video controls, like play, pause, and volume.
+
+```html
+<video width="320" height="240" controls>
+```
 
