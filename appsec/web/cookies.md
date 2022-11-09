@@ -69,7 +69,7 @@ One is kind of a `basic` cookie that identifies you as a user and allows you to 
 
 There are 2 different prefixes that you can add to your cookie.
 
-## __Secure-
+## `__Secure-`
 
 This prefix is the more relaxed in terms of the restrictions it applies but is still useful
 
@@ -82,7 +82,7 @@ There are 2 requirements for cookies that have the `__Secure- prefix`:
 1. Set with a `Secure` attribute
 2. Set from a `URI` whose `scheme` is considered `secure` by the user agent.
 
-## __Host-
+## `__Host-`
 
 The `__Host-` prefix is much more restrictive and offers a few additional protections.
 
@@ -94,8 +94,8 @@ There are 4 requirements the browser has to meet for cookies with the `__Host- p
 
 1. Set with a `Secure` attribute.
 2. Set from a URI whose "scheme" is considered "secure" by the user agent.
-3. Sent only to the host which set the cookie. That is, a cookie named "__Host-cookie1" set from "[https://example.com](https://example.com/)" MUST NOT contain a "Domain" attribute (and will therefore be sent only to "example.com", and not to "subdomain.example.com").
-4. Sent to every request for a host. That is, a cookie named "__Host-cookie1" MUST contain a "Path" attribute with a value of "/".
+3. Sent only to the host which set the cookie. That is, a cookie named `"__Host-cookie1" set from "[https://example.com](https://example.com/)" MUST NOT contain a "Domain" attribute (and will therefore be sent only to "example.com", and not to "subdomain.example.com").
+4. Sent to every request for a host. That is, a cookie named "__Host-cookie1" MUST contain a "Path" attribute with a value of "/".`
 
 ---
 
