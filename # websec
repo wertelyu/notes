@@ -1,0 +1,30 @@
+# websec
+sudo nmap -sC -sV -oA nmap/absolute 10.10.11.181
+sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip
+gobuster dir -u http://10.10.11.181/ -w ~/SecLists-master/Discovery/Web-Content/raft-small-words.txt -o gobuster.out
+find . -type f -exec exiftool {} \; | rg Author | awk -F: '{print $2}' | sed 's/^ //g' > usernames.txt
+
+
+https://stegonline.georgeom.net/checklist
+https://github.com/carlospolop/PEASS-ng
+https://martinkubecka.github.io/posts/thm/linux-privilege-escalation/
+https://johnjhacking.com/blog/linux-privilege-escalation-quick-and-dirty/
+https://gtfobins.github.io/gtfobins/tar/#sudo
+https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+https://www.boxentriq.com/code-breaking/cipher-identifier
+https://www.base64decode.org/
+https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list
+
+https://sysdig.com/blog/detecting-cve-2019-14287/
+
+to determine 
+
+they want employers tomake decision for them 
+
+to want to smth / to want smb to do smth
+
+to ask smb to do smth 
+
+to make smb DO smth
+
+to be in a hurry 
